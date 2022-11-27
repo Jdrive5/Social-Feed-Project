@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 import CreatePostForm from './Components/CreatePost/CreatePostForm';
+import DisplayPost from './Components/DisplayPost/DisplayPost';
 
 
 
@@ -9,7 +10,7 @@ function App() {
 
   function createNewPost(post){
 
-    let tempPosts = [post, ...posts];
+    let tempPosts = [post, ...post];
 
     setPosts(tempPosts);
 
@@ -26,11 +27,11 @@ function App() {
     </div>   
   </div>
   <div>
-      <CreateNewPostForm createNewPostProperty = {createNewPost} />
+      <CreatePostForm createNewPostProperty = {createNewPost} />
   </div>
   <br/>
   <div>
-      <DisplayPosts parentPosts = {posts} />
+      <DisplayPost parentPost={post} />
   </div>
 </body>
   );
