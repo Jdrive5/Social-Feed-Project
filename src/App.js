@@ -1,39 +1,27 @@
 import React, { Component, useState } from 'react';
 import CreatePostForm from './Components/CreatePost/CreatePostForm';
 import DisplayPost from './Components/DisplayPost/DisplayPost';
+import NavBar from './Components/NavBar/NavBar';
 
 
 
 function App() {
 
-  const [post, setPosts] = useState([])
+  const [posts, setPosts] = useState([{name: "Justin Driver", post: "Happy Hacking!"}])
 
-  function createNewPost(post){
+  function addNewPost (post){
 
-    let tempPosts = [post, ...post];
+    let tempPosts = [post, ...posts];
 
     setPosts(tempPosts);
 
   }
 
   return (
-<body>
-  <div>
     <div>
-      <header>
-        <NavBar></NavBar>
-      </header>
-      <br/>
-    </div>   
-  </div>
-  <div>
-      <CreatePostForm createNewPostProperty = {createNewPost} />
-  </div>
-  <br/>
-  <div>
-      <DisplayPost parentPost={post} />
-  </div>
-</body>
+      <CreatePostForm addNewPost={addNewPost} />
+      <DisplayPost parentPost={posts} />
+    </div>
   );
 }
 
