@@ -81,10 +81,14 @@ header {
     float: right;
 }
 
-.liked {
+.activeLike {
     color: green;
 }
 
-.disliked {
+.activeDislike {
     color: red;
+}
+
+.inactive{
+    color: gray;
 }

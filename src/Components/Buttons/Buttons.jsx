@@ -2,26 +2,26 @@ import { useState } from "react";
 
 const Buttons = (props) => {
 
-    const [likeButton, setLikeButton] = useState('like');
-    const [dislikeButton, setDislikeButton] = useState('dislike');
+    const [likeButton, setLikeButton] = useState('inactive');
+    const [dislikeButton, setDislikeButton] = useState('inactive');
 
     function handleLike(likeButton){
-        if (likeButton === 'like'){
-            setLikeButton('liked');
-            setDislikeButton('dislike');
+        if (likeButton === 'inactive'){
+            setLikeButton('activeLike');
+            setDislikeButton('inactive');
         }
         else{
-            setLikeButton('like');
+            setLikeButton('inactive');
         }
 }
 
     function handleDislike(dislikeButton){
-        if (dislikeButton === 'dislike'){
-            setDislikeButton('disliked');
-            setLikeButton('like');
+        if (dislikeButton === 'inactive'){
+            setDislikeButton('activeDislike');
+            setLikeButton('inactive');
         }
         else{
-            setDislikeButton('dislike');
+            setDislikeButton('inactive');
         }
 }
 
