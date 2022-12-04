@@ -1,23 +1,12 @@
+import Post from '../Post/Post';
+
 
 const DisplayPost = (props) => {
     return (
-        <div>
+        <div class='Display_Form'>
             {props.parentPost.map((post) => {
                 return (
-                    <div className="bottom-line pad">
-                        <table className="flex-container">
-                            <thead>
-                                <tr>
-                                    <th className="change-name-size">{post.name}</th>
-                                </tr>
-                            </thead>
-                            <tbody className="offset-post-content">
-                                <tr>
-                                    <td className="max-post-width">{post.post}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>        
+                    <Post post={post}></Post> 
              );    
         })}
         </div>

@@ -19,12 +19,12 @@ function handleSubmit(event) {
 
 return (
     <form onSubmit={handleSubmit}>
-        <div className='Post_Card'>
+        <div className='Post_Form'>
             <label>Name</label>
             <input type='text' className="form-control" value={name} onChange={(event) => setName(event.target.value)} />
             <label>Post</label>
             <input type='text' className="form-control" value={post} onChange={(event) => setPost(event.target.value)} />
-            <button type='submit' className='btn btn-primary'>Create</button>
+            <button type='submit' className='btn-btn-primary'>Create</button>
         </div> 
     </form>
 )

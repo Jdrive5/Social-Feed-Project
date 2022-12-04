@@ -1,7 +1,8 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import CreatePostForm from './Components/CreatePost/CreatePostForm';
 import DisplayPost from './Components/DisplayPost/DisplayPost';
 import NavBar from './Components/NavBar/NavBar';
+import './App.css';
 
 
 
@@ -14,14 +15,28 @@ function App() {
     let tempPosts = [post, ...posts];
 
     setPosts(tempPosts);
+    
 
   }
 
   return (
-    <div>
-      <CreatePostForm addNewPost={addNewPost} />
-      <DisplayPost parentPost={posts} />
-    </div>
+    
+      <div>
+        <div>
+          <header>
+            <NavBar />
+          </header>
+          <br/>
+        </div>
+          <div>
+              <CreatePostForm addNewPost={addNewPost} />
+          </div>
+          <br/>
+            <div>
+              <DisplayPost parentPost={posts} />
+            </div>
+          </div>
+    
   );
 }
 

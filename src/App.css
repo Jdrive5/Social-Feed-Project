@@ -1,0 +1,90 @@
+*,
+*::before
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+header {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    background-color: white;
+    padding: 1em;
+}
+
+
+.text_muted {
+    color: gray;
+}
+
+.Post_Form {
+    width: 500px;
+    background-color: white;
+    padding: 40px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.Display_Form {
+    width: 500px;
+    background-color: white;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.form-control {
+    width: 300px;
+    border-radius: 5px;
+    border-color: black;
+    border-width: 1px;
+}
+
+
+.btn-btn-primary {
+    float: right;
+    background-color: lightblue;
+    border: none;
+    font-size: x-small;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+}
+
+
+.likeButton {
+    background-image: url(../src/Components/Post/images/likebutton.png);
+    background-size: cover;
+    border: none;
+    width: 30px;
+    height: 30px;
+    padding-right: 20px;
+    float: right;
+}
+
+.dislikeButton {
+    background-image: url(../src/Components/Post/images/dislikebutton.webp);
+    background-size: cover;
+    border: none;
+    width: 30px;
+    height: 30px;
+    padding-right: 5px;
+    float: right;
+}
+
+.liked {
+    color: green;
+}
+
+.disliked {
+    color: red;
+}
